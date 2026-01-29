@@ -1,0 +1,143 @@
+/* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Container utama */
+.app {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header styling - Background oranye selebar layar penuh, teks di tengah */
+.header {
+  background-color: #e88b09;
+  color: white;
+  padding: 80px 20px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3.3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  padding: 30px 0 0 0; /* Padding atas saja untuk jarak dengan header */
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+/* Judul list - Di luar background putih */
+.product-list-title {
+  color: #3d4e44;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 50px 20px 50px;
+}
+
+/* Container untuk semua card */
+.product-cards-container {
+  padding: 0 50px;
+}
+
+/* Card individual untuk setiap produk */
+.product-card {
+  background-color: white;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Bullet point custom */
+.product-card::before {
+  content: "•";
+  color: #3d4e44;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.product-text {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Footer styling - Background hitam selebar layar penuh, teks di tengah */
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 40px 20px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .product-list-title {
+    font-size: 1.6rem;
+    margin: 0 30px 15px 30px;
+  }
+
+  .product-cards-container {
+    padding: 0 30px;
+  }
+
+  .product-card {
+    padding: 12px 15px;
+  }
+
+  .product-text {
+    font-size: 1rem;
+  }
+
+  .product-card::before {
+    margin-right: 12px;
+  }
+}
