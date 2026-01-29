@@ -226,7 +226,7 @@ const TaskReward = ({ onBack }) => {
             }}
           >
             <ArrowLeft size={20} />
-            Kembali ke Home
+            Kembali ke Features
           </button>
           
           {/* User Level Status - Top Right */}

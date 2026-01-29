@@ -55,16 +55,20 @@ export default function Home() {
     }
   };
 
-  const handleBackToHome = () => {
+  const handleBackToFeatures = () => {
     setCurrentView('home');
     setSelectedFeature(null);
+    // Scroll to features section after a short delay
+    setTimeout(() => {
+      scrollToSection('features');
+    }, 100);
   };
 
   // If we're in task selection view, render that component
   if (currentView === 'taskSelection') {
     return (
       <TaskSelection 
-        onBack={handleBackToHome} 
+        onBack={handleBackToFeatures} 
         selectedFeature={selectedFeature}
       />
     );
@@ -74,7 +78,7 @@ export default function Home() {
   if (currentView === 'customTask') {
     return (
       <CustomTask 
-        onBack={handleBackToHome}
+        onBack={handleBackToFeatures}
       />
     );
   }
@@ -83,7 +87,7 @@ export default function Home() {
   if (currentView === 'progressTracker') {
     return (
       <ProgressTracker 
-        onBack={handleBackToHome}
+        onBack={handleBackToFeatures}
       />
     );
   }
@@ -92,7 +96,7 @@ export default function Home() {
   if (currentView === 'taskReward') {
     return (
       <TaskReward 
-        onBack={handleBackToHome}
+        onBack={handleBackToFeatures}
       />
     );
   }

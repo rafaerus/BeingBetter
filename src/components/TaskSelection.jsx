@@ -118,7 +118,7 @@ const TaskSelection = ({ onBack, selectedFeature }) => {
           }}
         >
           <ArrowLeft size={20} />
-          Kembali ke Home
+          Kembali ke Features
         </button>
         
         <h1 style={{ 

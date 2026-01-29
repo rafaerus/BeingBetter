@@ -82,7 +82,7 @@ const CustomTask = ({ onBack }) => {
           }}
         >
           <ArrowLeft size={20} />
-          Kembali ke Home
+          Kembali ke Features
         </button>
         
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
